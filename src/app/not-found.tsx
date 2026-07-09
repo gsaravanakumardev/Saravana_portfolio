@@ -5,11 +5,11 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background text-foreground">
-      <Card className="w-full max-w-md mx-4 border-white/10 bg-secondary/30">
+      <Card className="w-full max-w-md mx-4 border-border/50 bg-secondary/30">
         <CardContent className="pt-6 text-center">
           <div className="flex flex-col items-center mb-6 gap-2">
             <AlertCircle className="h-12 w-12 text-primary mb-2" />
-            <h1 className="text-3xl font-bold text-white">
+            <h1 className="text-3xl font-bold text-foreground">
               404 Page Not Found
             </h1>
           </div>

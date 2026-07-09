@@ -65,7 +65,7 @@ export default function About() {
           initial="hidden"
           animate="visible"
         >
-          <motion.h1 variants={fadeUp} className="text-5xl md:text-8xl font-black tracking-tight text-white mb-8">
+          <motion.h1 variants={fadeUp} className="text-5xl md:text-8xl font-black tracking-tight text-foreground mb-8">
             About Me
           </motion.h1>
 
@@ -73,14 +73,14 @@ export default function About() {
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
               Results-oriented Product/UI-UX Designer creating user-centered digital products for web and mobile.
             </p>
-            <p className="text-white/70 mt-6">
+            <p className="text-foreground/70 mt-6">
               I blend design thinking with technical understanding to build calm, high-signal interfaces. My background as a software developer gives me a pragmatic approach to design- I design things that can actually be built, focusing on logic, states, and edge cases alongside aesthetics.
             </p>
           </motion.div>
 
           {/* Experience */}
           <motion.div variants={fadeUp} className="mb-24">
-            <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
+            <h2 className="text-3xl font-bold text-foreground mb-10 flex items-center gap-3">
               <Briefcase className="w-6 h-6 text-primary" /> Experience
             </h2>
             <div className="flex flex-col gap-0">
@@ -100,14 +100,14 @@ export default function About() {
                   <div className={`pb-12 flex-1 ${idx === experience.length - 1 ? "pb-0" : ""}`}>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-3">
                       <div>
-                        <h3 className="text-2xl font-bold text-white">{job.role}</h3>
+                        <h3 className="text-2xl font-bold text-foreground">{job.role}</h3>
                         <p className="text-lg text-primary font-medium">{job.company}</p>
                       </div>
-                      <span className="text-muted-foreground font-mono text-sm px-3 py-1 rounded-full bg-white/5 border border-white/10 inline-block w-fit shrink-0">
+                      <span className="text-muted-foreground font-mono text-sm px-3 py-1 rounded-full bg-secondary/30 border border-border/50 inline-block w-fit shrink-0">
                         {job.date}
                       </span>
                     </div>
-                    <p className="text-white/70 leading-relaxed max-w-2xl">
+                    <p className="text-foreground/70 leading-relaxed max-w-2xl">
                       {job.description}
                     </p>
                   </div>
@@ -119,19 +119,19 @@ export default function About() {
 
           {/* Skills */}
           <motion.div variants={fadeUp} className="mb-24">
-            <h2 className="text-3xl font-bold text-white mb-10">Skills & Expertise</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-10">Skills & Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {skills.map((skillGroup, idx) => (
-                <div key={idx} className="p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
+                <div key={idx} className="p-8 rounded-3xl bg-secondary/30 border border-border/30 hover:border-border/50 transition-colors">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                       {skillGroup.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white">{skillGroup.category}</h3>
+                    <h3 className="text-xl font-bold text-foreground">{skillGroup.category}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((item, i) => (
-                      <span key={i} className="px-3 py-1.5 rounded-lg bg-secondary/50 text-white/80 text-sm font-medium border border-white/5">
+                      <span key={i} className="px-3 py-1.5 rounded-lg bg-secondary/50 text-foreground/80 text-sm font-medium border border-border/30">
                         {item}
                       </span>
                     ))}
@@ -143,7 +143,7 @@ export default function About() {
 
           {/* Certifications */}
           <motion.div variants={fadeUp}>
-            <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
+            <h2 className="text-3xl font-bold text-foreground mb-10 flex items-center gap-3">
               <GraduationCap className="w-6 h-6 text-primary" /> Courses & Certifications
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -153,15 +153,15 @@ export default function About() {
                   href={cert.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors flex flex-col justify-between h-full min-h-[160px]"
+                  className="group p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 transition-colors flex flex-col justify-between h-full min-h-[160px]"
                 >
                   <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors pr-8">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors pr-8">
                       {cert.title}
                     </h3>
                     <p className="text-muted-foreground mt-2">{cert.issuer}</p>
                   </div>
-                  <div className="flex items-center gap-2 mt-6 text-sm font-medium text-white/60 group-hover:text-white transition-colors">
+                  <div className="flex items-center gap-2 mt-6 text-sm font-medium text-foreground/60 group-hover:text-foreground transition-colors">
                     View Credential <ExternalLink className="w-4 h-4" />
                   </div>
                 </a>

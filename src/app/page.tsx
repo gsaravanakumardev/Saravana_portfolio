@@ -31,12 +31,12 @@ function FeaturedCarousel() {
     <div className="mb-32 w-full">
       <div className="flex items-center justify-between mb-8 text-left">
         <h2 className="text-2xl font-bold">Featured Case Study</h2>
-        <Link href="/projects" className="text-sm font-medium text-muted-foreground hover:text-white flex items-center gap-1 transition-colors">
+        <Link href="/projects" className="text-sm font-medium text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors">
           All projects <ArrowUpRight className="w-4 h-4" />
         </Link>
       </div>
 
-      <div className="relative h-[90vh] md:h-[95vh] lg:h-[100vh] min-h-[600px] max-h-[1080px] rounded-2xl overflow-hidden mb-6 border border-white/5 bg-[#232620]">
+      <div className="relative h-[90vh] md:h-[95vh] lg:h-[100vh] min-h-[600px] max-h-[1080px] rounded-2xl overflow-hidden mb-6 border border-border/30 bg-card">
         <AnimatePresence mode="wait">
           <motion.div
             key={active.id}
@@ -48,7 +48,7 @@ function FeaturedCarousel() {
           >
             {/* Link covers the entire card area absolutely */}
             <Link href={`/projects/${active.id}`} className="absolute inset-0 group">
-              <div className="absolute inset-0" style={{ backgroundColor: "#232620" }} />
+              <div className="absolute inset-0" style={{ backgroundColor: "var(--card)" }} />
               <div className="absolute inset-0 opacity-25" style={{
                 background: `radial-gradient(circle at 70% 30%, ${active.color} 0%, transparent 60%), radial-gradient(circle at 30% 70%, ${active.color} 0%, transparent 60%)`
               }} />
@@ -56,13 +56,13 @@ function FeaturedCarousel() {
                 <h3 className="text-4xl md:text-6xl font-black tracking-tighter opacity-90" style={{ color: active.color }}>
                   {active.title.split(' ')[0]}
                 </h3>
-                <p className="text-xl mt-4 font-medium opacity-70 text-white">{active.category}</p>
+                <p className="text-xl mt-4 font-medium opacity-70 text-foreground">{active.category}</p>
               </div>
               {/* Overlay dims on hover to signal it's clickable */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500" />
               {/* "View Case Study" badge fades in on hover */}
               <div className="absolute bottom-6 right-6 z-20 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-black text-sm font-bold">
+                <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-foreground text-background text-sm font-bold">
                   View Case Study <ArrowUpRight className="w-4 h-4" />
                 </span>
               </div>
@@ -78,19 +78,19 @@ function FeaturedCarousel() {
             key={p.id}
             onClick={() => setActiveIndex(i)}
             aria-label={`Show ${p.title}`}
-            className={`h-1.5 rounded-full transition-all ${i === activeIndex ? "w-8 bg-primary" : "w-3 bg-white/20 hover:bg-white/40"}`}
+            className={`h-1.5 rounded-full transition-all ${i === activeIndex ? "w-8 bg-primary" : "w-3 bg-secondary/70 hover:bg-foreground/40"}`}
           />
         ))}
       </div>
 
       <Link href={`/projects/${active.id}`} className="flex flex-col md:flex-row md:items-center justify-between gap-4 text-left group">
         <div>
-          <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">{active.title}</h3>
+          <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">{active.title}</h3>
           <p className="text-muted-foreground mt-1">{active.role}</p>
         </div>
         <div className="flex items-center gap-3">
           {active.tags.slice(0, 2).map(tag => (
-            <span key={tag} className="text-xs font-medium px-3 py-1 rounded-full border border-white/10 bg-white/5">
+            <span key={tag} className="text-xs font-medium px-3 py-1 rounded-full border border-border/50 bg-secondary/30">
               {tag}
             </span>
           ))}
@@ -149,7 +149,7 @@ function PhilosophyCarousel() {
   return (
     <div className="mb-32 w-full">
       {/* Card */}
-      <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01]">
+      <div className="relative rounded-3xl overflow-hidden border border-border/50 bg-gradient-to-br from-white/[0.04] to-white/[0.01]">
         {/* Accent glow */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-primary/10 blur-3xl" />
@@ -189,7 +189,7 @@ function PhilosophyCarousel() {
                 exit="exit"
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-                className="text-2xl md:text-4xl font-light italic leading-snug text-white/90 tracking-wide"
+                className="text-2xl md:text-4xl font-light italic leading-snug text-foreground/90 tracking-wide"
               >
                 &ldquo;{quotes[active].text}&rdquo;
               </motion.blockquote>
@@ -220,7 +220,7 @@ function PhilosophyCarousel() {
                   key={i}
                   onClick={() => go(i)}
                   aria-label={`Go to quote ${i + 1}`}
-                  className={`rounded-full transition-all duration-300 ${i === active ? "w-6 h-1.5 bg-primary" : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"
+                  className={`rounded-full transition-all duration-300 ${i === active ? "w-6 h-1.5 bg-primary" : "w-1.5 h-1.5 bg-secondary/70 hover:bg-foreground/40"
                     }`}
                 />
               ))}
@@ -231,14 +231,14 @@ function PhilosophyCarousel() {
               <button
                 onClick={() => go(active - 1)}
                 aria-label="Previous quote"
-                className="w-9 h-9 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/20 transition-all hover:scale-110"
+                className="w-9 h-9 rounded-full border border-border/50 bg-secondary/30 flex items-center justify-center text-foreground hover:bg-secondary/50 hover:border-border/70 transition-all hover:scale-110"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => go(active + 1)}
                 aria-label="Next quote"
-                className="w-9 h-9 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/20 transition-all hover:scale-110"
+                className="w-9 h-9 rounded-full border border-border/50 bg-secondary/30 flex items-center justify-center text-foreground hover:bg-secondary/50 hover:border-border/70 transition-all hover:scale-110"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -263,12 +263,12 @@ export default function Home() {
           animate="visible"
           className="w-full text-left"
         >
-          <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-muted-foreground">
+          <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/30 border border-border/50 text-sm text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Taking on 2 new projects for Q3 2026
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="text-4xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+          <motion.h1 variants={fadeUp} className="text-4xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
             Product Designer creating <br className="hidden md:block" />
             <span className="text-muted-foreground">obvious solutions for</span> <br className="hidden md:block" />
             complex problems.
@@ -288,7 +288,7 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 transition-colors flex items-center gap-2"
+              className="px-8 py-4 rounded-full bg-secondary/30 border border-border/50 text-foreground font-medium hover:bg-secondary/50 transition-colors flex items-center gap-2"
             >
               Get in touch
             </Link>
@@ -306,56 +306,56 @@ export default function Home() {
 
           {/* Quick Links */}
           <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
-            <a href="https://www.behance.net/saravanan_design" target="_blank" rel="noreferrer" className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all group flex items-center justify-between">
+            <a href="https://www.behance.net/saravanan_design" target="_blank" rel="noreferrer" className="p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:border-border/70 transition-all group flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-[#1769ff]/10 text-[#1769ff] flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FaBehance className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">Behance</h4>
+                  <h4 className="font-semibold text-foreground">Behance</h4>
                   <p className="text-sm text-muted-foreground">/saravanan_design</p>
                 </div>
               </div>
-              <ArrowUpRight className="text-muted-foreground group-hover:text-white transition-colors" />
+              <ArrowUpRight className="text-muted-foreground group-hover:text-foreground transition-colors" />
             </a>
 
-            <a href="https://github.com/gsaravanakumardev" target="_blank" rel="noreferrer" className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all group flex items-center justify-between">
+            <a href="https://github.com/gsaravanakumardev" target="_blank" rel="noreferrer" className="p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:border-border/70 transition-all group flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FaGithub className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">GitHub</h4>
+                  <h4 className="font-semibold text-foreground">GitHub</h4>
                   <p className="text-sm text-muted-foreground">@gsaravanakumardev</p>
                 </div>
               </div>
-              <ArrowUpRight className="text-muted-foreground group-hover:text-white transition-colors" />
+              <ArrowUpRight className="text-muted-foreground group-hover:text-foreground transition-colors" />
             </a>
 
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all group flex items-center justify-between">
+            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:border-border/70 transition-all group flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Download className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">Resume</h4>
+                  <h4 className="font-semibold text-foreground">Resume</h4>
                   <p className="text-sm text-muted-foreground">Download PDF</p>
                 </div>
               </div>
-              <ArrowUpRight className="text-muted-foreground group-hover:text-white transition-colors" />
+              <ArrowUpRight className="text-muted-foreground group-hover:text-foreground transition-colors" />
             </a>
 
-            <Link href="/contact" className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all group flex items-center justify-between">
+            <Link href="/contact" className="p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 hover:border-border/70 transition-all group flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">Contact</h4>
+                  <h4 className="font-semibold text-foreground">Contact</h4>
                   <p className="text-sm text-muted-foreground">Get in touch</p>
                 </div>
               </div>
-              <ArrowUpRight className="text-muted-foreground group-hover:text-white transition-colors" />
+              <ArrowUpRight className="text-muted-foreground group-hover:text-foreground transition-colors" />
             </Link>
           </motion.div>
         </motion.div>

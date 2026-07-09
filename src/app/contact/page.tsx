@@ -62,9 +62,9 @@ function ContactForm() {
   }
 
   return (
-    <div className="h-full p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 flex flex-col">
+    <div className="h-full p-8 md:p-10 rounded-3xl bg-secondary/30 border border-border/50 flex flex-col">
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Send a message</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Send a message</h2>
         <p className="text-muted-foreground mb-8">Fill this in and I'll get back to you within a day or two.</p>
       </div>
 
@@ -76,11 +76,11 @@ function ContactForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white/80 mb-2 block">Name</FormLabel>
+                  <FormLabel className="text-foreground/80 mb-2 block">Name</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Your name"
-                      className="bg-background/60 border-white/10 text-white placeholder:text-muted-foreground/60 h-12 rounded-md"
+                      className="bg-background/60 border-border/50 text-foreground placeholder:text-muted-foreground/60 h-12 rounded-md"
                       data-testid="input-name"
                       {...field}
                     />
@@ -94,12 +94,12 @@ function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white/80 mb-2 block">Email</FormLabel>
+                  <FormLabel className="text-foreground/80 mb-2 block">Email</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
                       placeholder="you@example.com"
-                      className="bg-background/60 border-white/10 text-white placeholder:text-muted-foreground/60 h-12 rounded-md"
+                      className="bg-background/60 border-border/50 text-foreground placeholder:text-muted-foreground/60 h-12 rounded-md"
                       data-testid="input-email"
                       {...field}
                     />
@@ -114,11 +114,11 @@ function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem className="flex-1 flex flex-col">
-                <FormLabel className="text-white/80 mb-2 block">Message</FormLabel>
+                <FormLabel className="text-foreground/80 mb-2 block">Message</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Tell me a bit about your project..."
-                    className="bg-background/60 border-white/10 text-white placeholder:text-muted-foreground/60 rounded-xl resize-none flex-1 min-h-[120px]"
+                    className="bg-background/60 border-border/50 text-foreground placeholder:text-muted-foreground/60 rounded-xl resize-none flex-1 min-h-[120px]"
                     data-testid="input-message"
                     {...field}
                   />
@@ -133,7 +133,7 @@ function ContactForm() {
             className="w-fit px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 mt-auto"
           >
             {isSubmitting ? (
-              <><span className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" /> Sending...</>
+              <><span className="w-5 h-5 border-2 border-border/70 border-t-white rounded-full animate-spin" /> Sending...</>
             ) : submitted ? (
               <><CheckCircle2 className="w-5 h-5" /> Message sent</>
             ) : (
@@ -156,12 +156,12 @@ export default function Contact() {
           animate="visible"
           className="text-left"
         >
-          <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-muted-foreground">
+          <motion.div variants={fadeUp} className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/30 border border-border/50 text-sm text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Available for new opportunities
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="text-5xl md:text-8xl font-black tracking-tight text-white mb-6">
+          <motion.h1 variants={fadeUp} className="text-5xl md:text-8xl font-black tracking-tight text-foreground mb-6">
             Let's talk.
           </motion.h1>
 
@@ -183,13 +183,13 @@ export default function Contact() {
               {/* Email card */}
               <a
                 href="mailto:gsaravanakumar101@gmail.com"
-                className="flex items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
+                className="flex items-center gap-4 p-6 rounded-3xl bg-secondary/30 border border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
               >
-                <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-lg font-bold text-white mb-0.5 group-hover:text-primary transition-colors">Email me</h2>
+                  <h2 className="text-lg font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors">Email me</h2>
                   <p className="text-muted-foreground text-sm truncate">gsaravanakumar101@gmail.com</p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
@@ -198,13 +198,13 @@ export default function Contact() {
               {/* Phone card */}
               <a
                 href="tel:+916381786199"
-                className="flex items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
+                className="flex items-center gap-4 p-6 rounded-3xl bg-secondary/30 border border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
               >
-                <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-lg font-bold text-white mb-0.5 group-hover:text-primary transition-colors">Call me</h2>
+                  <h2 className="text-lg font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors">Call me</h2>
                   <p className="text-muted-foreground text-sm truncate">+91 63817-86199</p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
@@ -215,13 +215,13 @@ export default function Contact() {
                 href="https://www.behance.net/saravanan_design"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
+                className="flex items-center gap-4 p-6 rounded-3xl bg-secondary/30 border border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
               >
-                <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
                   <FaBehance className="w-6 h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-lg font-bold text-white mb-0.5 group-hover:text-primary transition-colors">Behance</h2>
+                  <h2 className="text-lg font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors">Behance</h2>
                   <p className="text-muted-foreground text-sm truncate">/saravanan_design</p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
@@ -232,13 +232,13 @@ export default function Contact() {
                 href="https://github.com/gsaravanakumardev"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
+                className="flex items-center gap-4 p-6 rounded-3xl bg-secondary/30 border border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
               >
-                <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
                   <FaGithub className="w-6 h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-lg font-bold text-white mb-0.5 group-hover:text-primary transition-colors">GitHub</h2>
+                  <h2 className="text-lg font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors">GitHub</h2>
                   <p className="text-muted-foreground text-sm truncate">@gsaravanakumardev</p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
@@ -249,13 +249,13 @@ export default function Contact() {
                 href="https://www.instagram.com/uiux.think?igsh=MTFlODY5a2NtaTlzYQ=="
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
+                className="flex items-center gap-4 p-6 rounded-3xl bg-secondary/30 border border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
               >
-                <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
                   <FaInstagram className="w-6 h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-lg font-bold text-white mb-0.5 group-hover:text-primary transition-colors">Instagram</h2>
+                  <h2 className="text-lg font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors">Instagram</h2>
                   <p className="text-muted-foreground text-sm truncate">@uiux.think</p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />

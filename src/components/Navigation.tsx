@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -16,9 +17,9 @@ export function Navigation() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between bg-background/80 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 flex items-center justify-between bg-background/80 backdrop-blur-md border-b border-border/50">
       {/* Logo */}
-      <Link href="/" className="font-display font-bold text-xl tracking-tight text-white hover:text-primary transition-colors flex items-center gap-2">
+      <Link href="/" className="font-display font-bold text-xl tracking-tight text-foreground hover:text-primary transition-colors flex items-center gap-2">
         <span className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm">
           S
         </span>
@@ -26,7 +27,7 @@ export function Navigation() {
       </Link>
 
       {/* Nav links */}
-      <nav className="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-3 py-2 shadow-sm">
+      <nav className="hidden md:flex items-center gap-1 bg-secondary/30 border border-border/50 rounded-full px-3 py-2 shadow-sm">
         {links.map((link) => {
           const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
           return (
@@ -52,13 +53,14 @@ export function Navigation() {
         })}
       </nav>
 
-      {/* Mobile nav indicator & Resume */}
-      <div className="flex items-center gap-4">
+      {/* Action buttons */}
+      <div className="flex items-center gap-3">
+        <ThemeToggle />
         <a
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-all hover:scale-105 active:scale-95"
+          className="hidden md:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold bg-secondary/50 hover:bg-secondary/80 border border-border/50 text-foreground transition-all hover:scale-105 active:scale-95"
         >
           Resume
         </a>
@@ -78,7 +80,7 @@ export function MobileNavigation() {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 bg-background/90 backdrop-blur-md border border-white/10 rounded-full p-2 shadow-xl w-[90%] max-w-[360px] justify-between">
+    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 bg-background/90 backdrop-blur-md border border-border/50 rounded-full p-2 shadow-xl w-[90%] max-w-[360px] justify-between">
       {links.map((link) => {
         const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
         return (
