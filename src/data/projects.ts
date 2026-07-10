@@ -48,8 +48,8 @@ export const projects: Project[] = [
     category: "Product Design",
     tags: ["UI/UX", "DASHBOARD", "SAAS"],
     year: "2025",
-    client: "Prototype",
-    role: "Product Designer -  Research, IA, UI, Prototype",
+    client: "Self-Initiated Concept",
+    role: "Product Designer – Research, IA, UI, Prototype",
     description:
       "A modern admin console prototype that centralizes KPIs, user management, analytics, reporting, and AI-driven insight triage into one calm, high-signal interface.",
     overview:
@@ -101,8 +101,8 @@ export const projects: Project[] = [
     category: "Civic Product",
     tags: ["UI/UX", "BILINGUAL", "GOV TECH"],
     year: "2025",
-    client: "Concept Project",
-    role: "Product Designer -  Research, IA, Bilingual UX, UI",
+    client: "Self-Initiated Concept",
+    role: "Product Designer – Research, IA, Bilingual UX, UI",
     description:
       "A bilingual (Tamil + English) citizen services and constituency intelligence dashboard that centralizes Tamil Nadu government service access, eligibility, and civic engagement into one modern interface.",
     overview:
@@ -153,8 +153,8 @@ export const projects: Project[] = [
     category: "Feature Addition",
     tags: ["MOBILE", "UI/UX", "MESSAGING"],
     year: "2024",
-    client: "Course Project -  Google UX",
-    role: "UX Designer -  Research, Flows, UI, Prototype",
+    client: "Google UX Certificate · Concept",
+    role: "UX Designer – Research, Flows, UI, Prototype",
     description:
       "A native-feeling schedule feature added to WhatsApp Messenger that lets users compose a message now and deliver it at a chosen time -  without breaking WhatsApp's familiar chat pattern.",
     overview:
@@ -202,8 +202,8 @@ export const projects: Project[] = [
     category: "End-to-End App",
     tags: ["MOBILE", "UI/UX", "WELLNESS"],
     year: "2024",
-    client: "Course Project -  Google UX",
-    role: "UX Designer -  Research, Personas, UI, Prototype",
+    client: "Google UX Certificate · Concept",
+    role: "UX Designer – Research, Personas, UI, Prototype",
     description:
       "A personalised diary app that empowers people on their natural hair journey -  logging routines, tracking hydration and porosity, and building a picture of what actually works for their hair.",
     overview:
@@ -247,12 +247,12 @@ export const projects: Project[] = [
   },
   {
     id: "civic-voice",
-    title: "Civic Voice -  Complaint Tracker",
+    title: "Civic Voice – Complaint Tracker",
     category: "Mobile App",
     tags: ["MOBILE", "UI/UX", "CIVIC"],
     year: "2024",
-    client: "Concept Project",
-    role: "Product Designer -  Research, Flows, UI, Prototype",
+    client: "Self-Initiated Concept",
+    role: "Product Designer – Research, Flows, UI, Prototype",
     description:
       "A mobile complaint tracker that lets citizens raise, geo-tag and follow civic issues -  potholes, water, streetlights -  with clear status updates from the local body.",
     overview:
@@ -296,12 +296,12 @@ export const projects: Project[] = [
   },
   {
     id: "medislot",
-    title: "MediSlot -  Hospital Appointments",
+    title: "MediSlot – Hospital Appointments",
     category: "Mobile App",
     tags: ["MOBILE", "UI/UX", "HEALTHCARE"],
     year: "2024",
-    client: "Concept Project",
-    role: "Product Designer -  Research, Flows, UI, Prototype",
+    client: "Self-Initiated Concept",
+    role: "Product Designer – Research, Flows, UI, Prototype",
     description:
       "A hospital appointment booking app that helps patients find the right doctor, book a real time slot and prepare for the visit -  without phone calls or waiting rooms.",
     overview:

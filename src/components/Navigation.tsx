@@ -58,9 +58,8 @@ export function Navigation() {
         <ThemeToggle />
         <a
           href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold bg-secondary/50 hover:bg-secondary/80 border border-border/50 text-foreground transition-all hover:scale-105 active:scale-95"
+          download="Saravana_Kumar_Resume.pdf"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-secondary/50 hover:bg-secondary/80 border border-border/50 text-foreground transition-all hover:scale-105 active:scale-95"
         >
           Resume
         </a>

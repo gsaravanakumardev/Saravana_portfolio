@@ -70,7 +70,7 @@ export default function ProjectDetail({ params }: PageProps) {
                   <p className="font-medium text-foreground">{project.role}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Client / Context</p>
+                  <p className="text-sm text-muted-foreground mb-1">Context</p>
                   <p className="font-medium text-foreground">{project.client}</p>
                 </div>
                 <div>
