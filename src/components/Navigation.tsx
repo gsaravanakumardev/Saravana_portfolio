@@ -55,7 +55,7 @@ export function Navigation() {
 
       {/* Action buttons */}
       <div className="flex items-center gap-3">
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         <a
           href="/resume.pdf"
           download="Saravana_Kumar_Resume.pdf"
