@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { PageTransition, staggerContainer, fadeUp } from "@/components/Animations";
 import { Container } from "@/components/Container";
-import { Mail, Phone, Send, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle2, ArrowUpRight, Dribbble } from "lucide-react";
 import { FaBehance, FaGithub, FaInstagram } from "react-icons/fa";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -223,6 +223,23 @@ export default function Contact() {
                 <div className="flex-1 min-w-0">
                   <h2 className="text-lg font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors">Behance</h2>
                   <p className="text-muted-foreground text-sm truncate">/saravanan_design</p>
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              </a>
+
+              {/* Dribbble card */}
+              <a
+                href="https://dribbble.com/saravananakumar"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-4 p-6 rounded-3xl bg-secondary/30 border border-border/50 hover:bg-primary/10 hover:border-primary/30 transition-all group hover:scale-[1.02]"
+              >
+                <div className="w-12 h-12 rounded-full bg-secondary/50 text-foreground flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all group-hover:scale-110">
+                  <Dribbble className="w-6 h-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h2 className="text-lg font-bold text-foreground mb-0.5 group-hover:text-primary transition-colors">Dribbble</h2>
+                  <p className="text-muted-foreground text-sm truncate">saravananakumar</p>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
               </a>

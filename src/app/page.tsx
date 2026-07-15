@@ -1,16 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Download, Mail } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Dribbble, Mail } from "lucide-react";
 import { FaBehance, FaGithub } from "react-icons/fa";
 import { projects } from "@/data/projects";
 import { PageTransition, staggerContainer, fadeUp } from "@/components/Animations";
 import { Container } from "@/components/Container";
+import { Hero } from "./hero";
 
 /* ──────────────────────────────────────────────────────────────────
-   Featured project carousel — Studio Noir redesign
+   Featured project carousel - Studio Noir redesign
    Editorial two-column layout: big number + title left, meta right
 ─────────────────────────────────────────────────────────────────── */
 function FeaturedCarousel() {
@@ -43,7 +45,7 @@ function FeaturedCarousel() {
         <div className="flex items-center gap-3">
           <span className="w-1.5 h-6 rounded-full bg-primary" />
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
-            Featured Work
+            Featured Case Studies
           </span>
         </div>
         <Link
@@ -61,7 +63,7 @@ function FeaturedCarousel() {
           className="relative w-full rounded-2xl overflow-hidden border border-border bg-card"
           style={{ minHeight: "420px" }}
         >
-          {/* Accent color wash — very subtle */}
+          {/* Accent color wash - very subtle */}
           <div
             className="absolute inset-0 opacity-[0.07] transition-opacity duration-700 group-hover:opacity-[0.12]"
             style={{
@@ -86,7 +88,7 @@ function FeaturedCarousel() {
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               className="relative z-10 h-full flex flex-col md:flex-row"
             >
-              {/* LEFT — large index number + project title */}
+              {/* LEFT - large index number + project title */}
               <div className="flex-1 flex flex-col justify-between p-8 md:p-12 border-b md:border-b-0 md:border-r border-border/50">
                 {/* Project number */}
                 <span
@@ -115,7 +117,7 @@ function FeaturedCarousel() {
                 </div>
               </div>
 
-              {/* RIGHT — meta + tags + CTA */}
+              {/* RIGHT - meta + tags + CTA */}
               <div className="flex flex-col justify-between p-8 md:p-12 md:w-72 lg:w-80 shrink-0">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-8">
@@ -206,7 +208,7 @@ function FeaturedCarousel() {
 ─────────────────────────────────────────────────────────────────── */
 const quotes = [
   {
-    text: "Great products feel obvious in hindsight — that obviousness is the work.",
+    text: "Great products feel obvious in hindsight - that obviousness is the work.",
     author: "Saravana Kumar",
     label: "Design Philosophy",
   },
@@ -299,7 +301,7 @@ function PhilosophyCarousel() {
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             className="text-base md:text-lg text-muted-foreground italic tracking-wide"
           >
-            — {quotes[active].author}
+            - {quotes[active].author}
           </motion.p>
         </AnimatePresence>
 
@@ -343,55 +345,16 @@ function PhilosophyCarousel() {
 ─────────────────────────────────────────────────────────────────── */
 export default function Home() {
   return (
-    <PageTransition className="pt-32 pb-32 md:pt-48 md:pb-32 min-h-[80vh] flex flex-col justify-center">
+    <PageTransition className="pb-32 md:pb-32 flex flex-col">
+      <Hero />
       <Container>
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="w-full text-left"
+          className="w-full text-left pt-24"
         >
-          <motion.div
-            variants={fadeUp}
-            className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-border text-sm text-muted-foreground"
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Taking on 2 new projects for Q3 2026
-          </motion.div>
 
-          <motion.h1
-            variants={fadeUp}
-            className="text-4xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]"
-          >
-            Product Designer creating{" "}
-            <br className="hidden md:block" />
-            <span className="text-muted-foreground">obvious solutions for</span>{" "}
-            <br className="hidden md:block" />
-            complex problems.
-          </motion.h1>
-
-          <motion.p
-            variants={fadeUp}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
-          >
-            I&apos;m Saravana Kumar, a UI/UX designer based in Tamil Nadu, India. I build calm,
-            high-signal interfaces that respect the user&apos;s time and attention.
-          </motion.p>
-
-          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-4 mb-32">
-            <Link
-              href="/projects"
-              className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95"
-            >
-              View Work
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-4 rounded-full bg-secondary border border-border text-foreground font-medium hover:bg-muted transition-colors flex items-center gap-2"
-            >
-              Get in touch
-            </Link>
-          </motion.div>
 
           {/* Featured Project Carousel */}
           <motion.div variants={fadeUp} className="w-full text-left">
@@ -445,19 +408,21 @@ export default function Home() {
             </a>
 
             <a
-              href="/resume.pdf"
-              download="Saravana_Kumar_Resume.pdf"
+              href="https://dribbble.com/saravananakumar"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-5 rounded-xl bg-secondary border border-border hover:border-primary/40 transition-all group flex items-center justify-between"
             >
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all">
-                  <Download className="w-4 h-4" />
+                  <Dribbble className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground text-sm">Resume</h4>
-                  <p className="text-xs text-muted-foreground">Download PDF</p>
+                  <h4 className="font-semibold text-foreground text-sm">Dribbble</h4>
+                  <p className="text-xs text-muted-foreground">View Design Portfolio</p>
                 </div>
               </div>
+
               <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             </a>
 

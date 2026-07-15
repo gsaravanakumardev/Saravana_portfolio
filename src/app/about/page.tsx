@@ -122,16 +122,16 @@ export default function About() {
             <h2 className="text-3xl font-bold text-foreground mb-10">Skills & Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {skills.map((skillGroup, idx) => (
-                <div key={idx} className="p-8 rounded-3xl bg-secondary/30 border border-border/30 hover:border-border/50 transition-colors">
+                <div key={idx} className="group p-8 rounded-3xl bg-secondary/30 border border-border/30 hover:border-primary/30 hover:bg-secondary/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.02)]">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-500">
                       {skillGroup.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">{skillGroup.category}</h3>
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-500">{skillGroup.category}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((item, i) => (
-                      <span key={i} className="px-3 py-1.5 rounded-lg bg-secondary/50 text-foreground/80 text-sm font-medium border border-border/30">
+                      <span key={i} className="px-3 py-1.5 rounded-lg bg-secondary/50 text-foreground/80 text-sm font-medium border border-border/30 cursor-default transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:shadow-[0_0_12px_currentColor]">
                         {item}
                       </span>
                     ))}
@@ -153,16 +153,16 @@ export default function About() {
                   href={cert.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="group p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/50 transition-colors flex flex-col justify-between h-full min-h-[160px]"
+                  className="group p-6 rounded-2xl bg-secondary/30 border border-border/30 hover:border-primary/30 hover:bg-secondary/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.02)] hover:-translate-y-1 flex flex-col justify-between h-full min-h-[160px]"
                 >
                   <div>
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors pr-8">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-500 pr-8">
                       {cert.title}
                     </h3>
                     <p className="text-muted-foreground mt-2">{cert.issuer}</p>
                   </div>
-                  <div className="flex items-center gap-2 mt-6 text-sm font-medium text-foreground/60 group-hover:text-foreground transition-colors">
-                    View Credential <ExternalLink className="w-4 h-4" />
+                  <div className="flex items-center gap-2 mt-6 text-sm font-medium text-foreground/60 group-hover:text-foreground transition-colors duration-500">
+                    View Credential <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform duration-500" />
                   </div>
                 </a>
               ))}

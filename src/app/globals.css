@@ -62,19 +62,19 @@
      Border           : #242424  →  hsl(0 0% 14%)
   ─────────────────────────────────────────────────────── */
 
-  --background: 0 0% 2%;            /* #050505 — near-black canvas */
-  --foreground: 0 0% 92%;           /* #EBEBEB — soft white text */
+  --background: 0 0% 2%;            /* #050505 - near-black canvas */
+  --foreground: 0 0% 92%;           /* #EBEBEB - soft white text */
 
-  --card: 0 0% 7%;                  /* #111111 — card surface */
+  --card: 0 0% 7%;                  /* #111111 - card surface */
   --card-foreground: 0 0% 92%;
 
   --popover: 0 0% 7%;
   --popover-foreground: 0 0% 92%;
 
-  --primary: 268 87% 56%;           /* #872EF0 — vibrant purple */
+  --primary: 268 87% 56%;           /* #872EF0 - vibrant purple */
   --primary-foreground: 0 0% 98%;   /* white text on purple */
 
-  --secondary: 0 0% 12%;            /* #1F1F1F — muted surface */
+  --secondary: 0 0% 12%;            /* #1F1F1F - muted surface */
   --secondary-foreground: 0 0% 92%;
 
   --muted: 0 0% 12%;                /* #1F1F1F */
@@ -86,7 +86,7 @@
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 0 0% 14%;               /* #242424 — subtle border */
+  --border: 0 0% 14%;               /* #242424 - subtle border */
   --input: 0 0% 14%;
   --ring: 268 87% 56%;              /* purple focus ring */
 
@@ -98,7 +98,7 @@
 }
 
 .dark {
-  /* Studio Noir is dark-first — .dark mirrors :root exactly */
+  /* Studio Noir is dark-first - .dark mirrors :root exactly */
   --background: 0 0% 2%;
   --foreground: 0 0% 92%;
   --card: 0 0% 7%;
