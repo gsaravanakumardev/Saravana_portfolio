@@ -70,7 +70,7 @@ export function Hero() {
                     alt="Saravana Kumar"
                     fill
                     priority
-                    className="object-cover object-top lg:object-center"
+                    className="object-scale-down object-top lg:object-center"
                 />
                 {/* Gradient fade so it blends into the background */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent lg:bg-gradient-to-r lg:from-background lg:via-background/20 lg:to-transparent" />

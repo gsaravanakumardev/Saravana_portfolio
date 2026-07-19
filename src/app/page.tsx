@@ -250,7 +250,7 @@ function PhilosophyCarousel() {
     <div className="mb-32 w-full">
       <div className="relative rounded-2xl overflow-hidden border border-border bg-card p-8 md:p-14">
         {/* Subtle lime glow */}
-        <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute top-12 right-0 w-48 h-48 bg-primary/5 blur-3xl rounded-full pointer-events-none" />
 
         {/* Label */}
         <div className="mb-6">
