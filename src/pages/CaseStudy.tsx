@@ -33,15 +33,15 @@ export default function CaseStudy() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Banner Area */}
-      <div 
+      <div
         className="pt-32 pb-24 px-6 relative"
         style={{ backgroundColor: project.primaryColor }}
       >
-        <div className="container mx-auto max-w-5xl relative z-10 text-white">
+        <div className="container mx-auto px-6 max-w-5xl relative z-10 text-white">
           <Link href="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-12 transition-colors">
             <ArrowLeft size={16} /> <span className="font-medium text-sm">Back to Work</span>
           </Link>
-          
+
           <div className="flex flex-wrap gap-3 mb-8">
             {project.tags.map((tag) => (
               <span key={tag} className="text-xs font-bold tracking-widest uppercase py-1 px-3 border border-white/30 rounded-full">
@@ -50,14 +50,14 @@ export default function CaseStudy() {
             ))}
           </div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-serif mb-6 leading-tight"
           >
             {project.title}
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -91,9 +91,9 @@ export default function CaseStudy() {
       </div>
 
       <div className="container mx-auto max-w-5xl px-6 py-20 space-y-32">
-        
+
         {/* Placeholder Mockup */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -185,7 +185,7 @@ export default function CaseStudy() {
             <ul className="space-y-6">
               {project.goals.map((goal, i) => (
                 <li key={i} className="flex gap-4 items-start text-lg text-muted-foreground font-light">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium text-sm mt-1">{i+1}</span>
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium text-sm mt-1">{i + 1}</span>
                   <span>{goal}</span>
                 </li>
               ))}
@@ -201,12 +201,12 @@ export default function CaseStudy() {
           <div className="md:col-span-8">
             <div className="space-y-12">
               {project.process.map((step, i) => (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ delay: i * 0.1 }}
-                  key={i} 
+                  key={i}
                   className="flex gap-6 relative"
                 >
                   {i !== project.process.length - 1 && (
@@ -229,13 +229,13 @@ export default function CaseStudy() {
             <h2 className="text-2xl font-serif text-foreground sticky top-24">Key Features</h2>
           </div>
           <div className="md:col-span-8">
-             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {project.features.map((feature, i) => (
                 <div key={i} className="p-6 bg-card border border-border rounded-xl">
                   <p className="text-foreground/80 font-medium text-sm">{feature}</p>
                 </div>
               ))}
-             </div>
+            </div>
           </div>
         </div>
 
@@ -252,9 +252,9 @@ export default function CaseStudy() {
         {/* CTA Links */}
         <div className="flex flex-wrap gap-4 pt-12 border-t border-border">
           {project.prototypeUrl && (
-            <a 
-              href={project.prototypeUrl} 
-              target="_blank" 
+            <a
+              href={project.prototypeUrl}
+              target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background rounded-full font-medium hover:bg-foreground/90 transition-transform hover:-translate-y-1 shadow-lg"
             >
@@ -262,9 +262,9 @@ export default function CaseStudy() {
             </a>
           )}
           {project.behanceUrl && (
-            <a 
-              href={project.behanceUrl} 
-              target="_blank" 
+            <a
+              href={project.behanceUrl}
+              target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#1769ff] text-white rounded-full font-medium hover:bg-[#1769ff]/90 transition-transform hover:-translate-y-1 shadow-lg"
             >
