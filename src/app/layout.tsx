@@ -1,43 +1,45 @@
 import type { Metadata } from "next";
-import { Navigation, MobileNavigation } from "@/components/Navigation";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { Montserrat, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/components/Providers";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--app-font-sans",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--app-font-serif",
+});
 
 export const metadata: Metadata = {
-  title: "Saravana Kumar Portfolio",
-  description: "Saravana Kumar Portfolio -  built on Next.js.",
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "Saravanan Portfolio",
+  description: "UI/UX Designer Portfolio",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          disableTransitionOnChange
-        >
-          <TooltipProvider>
-            <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground transition-colors duration-300">
-              <Navigation />
-              <main>
-                {children}
-              </main>
-              <MobileNavigation />
-            </div>
-            <Toaster />
-          </TooltipProvider>
-        </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${montserrat.variable} ${instrumentSerif.variable} font-sans antialiased bg-background text-foreground`}
+      >
+        <Providers>
+          <div className="min-h-[100dvh] flex flex-col relative">
+            <Navbar />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
