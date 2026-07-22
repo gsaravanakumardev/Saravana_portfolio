@@ -19,8 +19,8 @@ const skillCategories = [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-        <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+        <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
       </svg>
     ),
     title: "Product Design",
@@ -29,7 +29,7 @@ const skillCategories = [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+        <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
       </svg>
     ),
     title: "UX Design",
@@ -38,7 +38,7 @@ const skillCategories = [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+        <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
       </svg>
     ),
     title: "UI Design",
@@ -47,7 +47,7 @@ const skillCategories = [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
       </svg>
     ),
     title: "Tech",
@@ -144,55 +144,55 @@ export default function About() {
           </div>
 
           <div className="space-y-0">
-              {experiences.map((exp, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex gap-8"
-                >
-                  {/* Timeline column: dot + connecting line */}
-                  <div className="flex flex-col items-center flex-shrink-0" style={{ width: "14px" }}>
-                    {/* Square dot */}
+            {experiences.map((exp, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex gap-8"
+              >
+                {/* Timeline column: dot + connecting line */}
+                <div className="flex flex-col items-center flex-shrink-0" style={{ width: "14px" }}>
+                  {/* Square dot */}
+                  <div
+                    className="flex-shrink-0 bg-background z-10"
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      border: "2px solid hsl(var(--primary))",
+                      marginTop: "3px",
+                    }}
+                  />
+                  {/* Connector line — only between entries */}
+                  {i < experiences.length - 1 && (
                     <div
-                      className="flex-shrink-0 bg-background z-10"
+                      className="flex-1"
                       style={{
-                        width: "14px",
-                        height: "14px",
-                        border: "2px solid hsl(var(--primary))",
-                        marginTop: "3px",
+                        width: "1px",
+                        backgroundColor: "hsl(var(--border))",
+                        minHeight: "48px",
+                        marginTop: "4px",
                       }}
                     />
-                    {/* Connector line — only between entries */}
-                    {i < experiences.length - 1 && (
-                      <div
-                        className="flex-1"
-                        style={{
-                          width: "1px",
-                          backgroundColor: "hsl(var(--border))",
-                          minHeight: "48px",
-                          marginTop: "4px",
-                        }}
-                      />
-                    )}
-                  </div>
+                  )}
+                </div>
 
-                  {/* Content */}
-                  <div className={`flex-1 ${i < experiences.length - 1 ? "pb-12" : "pb-2"}`}>
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-1">
-                      <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
-                      <span className="flex-shrink-0 text-xs text-muted-foreground border border-border px-3 py-1 font-light tracking-wide whitespace-nowrap">
-                        {exp.period}
-                      </span>
-                    </div>
-                    <p className="text-sm font-medium text-primary mb-3">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground font-light leading-relaxed">{exp.description}</p>
+                {/* Content */}
+                <div className={`flex-1 ${i < experiences.length - 1 ? "pb-12" : "pb-2"}`}>
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-1">
+                    <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
+                    <span className="flex-shrink-0 text-xs text-muted-foreground border border-border px-3 py-1 font-light tracking-wide whitespace-nowrap">
+                      {exp.period}
+                    </span>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  <p className="text-sm font-medium text-primary mb-3">{exp.company}</p>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{exp.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Skills & Expertise */}
@@ -256,7 +256,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <a href="https://coursera.org/share/b9f2bde9f4a5fca1480caa6a85b76523" target="_blank" rel="noreferrer"
-               className="block p-7 border border-border bg-card">
+              className="block p-7 border border-border bg-card">
               <p className="text-xs font-bold tracking-widest text-primary uppercase mb-3">Coursera</p>
               <h4 className="text-lg font-medium text-foreground mb-4 leading-snug">
                 Foundations of User Experience (UX) Design
@@ -266,7 +266,7 @@ export default function About() {
               </span>
             </a>
             <a href="https://coursera.org/share/1d525976a8ce1296e3876c15a54dc35a" target="_blank" rel="noreferrer"
-               className="block p-7 border border-border bg-card">
+              className="block p-7 border border-border bg-card">
               <p className="text-xs font-bold tracking-widest text-primary uppercase mb-3">Coursera</p>
               <h4 className="text-lg font-medium text-foreground mb-4 leading-snug">
                 Introduction to Back-End Development

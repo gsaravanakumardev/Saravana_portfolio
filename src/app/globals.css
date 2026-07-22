@@ -68,7 +68,7 @@
   --popover-border: 220 10% 88%;
 
   /* Purple primary #882df0 */
-  --primary:      276 85% 56%;      /* #882df0 */
+  --primary:      276 85% 56%;      /* #A22FEE */
   --primary-foreground: 0 0% 100%;
 
   --secondary:    220 12% 95%;      /* very light cool gray */
@@ -146,7 +146,7 @@
   --popover-border: 220 15% 22%;
 
   /* Lighter purple for dark mode — more vibrant on dark bg */
-  --primary:      276 90% 70%;      /* #b06ef5 */
+  --primary:      94 89% 58%;      /* #89F336 */
   --primary-foreground: 220 18% 10%;
 
   --secondary:    220 15% 18%;
@@ -155,25 +155,25 @@
   --muted:        220 15% 18%;
   --muted-foreground: 220 10% 55%;
 
-  --accent:       276 90% 70%;
+  --accent:       94 89% 58%;
   --accent-foreground: 220 18% 10%;
 
   --destructive:  0 62% 50%;
   --destructive-foreground: 0 0% 100%;
 
   --input:        220 15% 22%;
-  --ring:         276 90% 70%;
+  --ring:         94 89% 58%;
 
   --sidebar:      220 18% 10%;
   --sidebar-foreground: 220 10% 88%;
   --sidebar-border: 220 15% 22%;
-  --sidebar-primary: 276 90% 70%;
+  --sidebar-primary: 94 89% 58%;
   --sidebar-primary-foreground: 220 18% 10%;
   --sidebar-accent: 220 15% 18%;
   --sidebar-accent-foreground: 220 10% 88%;
-  --sidebar-ring: 276 90% 70%;
+  --sidebar-ring: 94 89% 58%;
 
-  --chart-1: 276 90% 70%;
+  --chart-1: 94 89% 58%;
   --chart-2: 260 75% 68%;
   --chart-3: 290 65% 65%;
   --chart-4: 240 68% 65%;
