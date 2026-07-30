@@ -52,7 +52,7 @@ export function Navbar() {
             <rect x="9" y="21.5" width="14" height="2.5" fill="hsl(var(--foreground))" />
             <rect x="24" y="6" width="4" height="4" fill="hsl(var(--primary))" />
           </svg> */}
-          <span className="text-base font-serif tracking-wide text-foreground">Saravanan</span>
+          <span className="text-[24px] font-serif tracking-wide text-foreground">Saravanan</span>
         </Link>
 
         {/* Desktop Nav links */}
