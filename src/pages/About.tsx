@@ -128,6 +128,18 @@ export default function About() {
             <p className="text-muted-foreground font-light leading-relaxed text-base max-w-3xl">
               I am eager to bridge the gap between design and development, leveraging my UI/UX skills alongside my technical background. I thrive in cross-functional environments where creative concepts are translated into clean, performant code. My ultimate goal is to build cohesive, user-centered digital products that not only look beautiful but function flawlessly and meet business objectives.
             </p>
+            <div className="pt-2">
+              <a
+                href="/Saravanan Resume.pdf"
+                download="Saravanan_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-border text-foreground text-sm font-medium px-6 py-3 hover:border-primary hover:text-primary transition-colors"
+              >
+                Download Resume
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </a>
+            </div>
           </motion.div>
         </div>
 
