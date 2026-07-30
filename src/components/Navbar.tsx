@@ -43,7 +43,7 @@ export function Navbar() {
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="33" height="33" stroke="hsl(var(--foreground))" strokeWidth="1" />
             <rect x="9" y="8" width="14" height="2.5" fill="hsl(var(--foreground))" />
             <rect x="9" y="8" width="2.5" height="9" fill="hsl(var(--foreground))" />
@@ -51,7 +51,7 @@ export function Navbar() {
             <rect x="20.5" y="15" width="2.5" height="9" fill="hsl(var(--foreground))" />
             <rect x="9" y="21.5" width="14" height="2.5" fill="hsl(var(--foreground))" />
             <rect x="24" y="6" width="4" height="4" fill="hsl(var(--primary))" />
-          </svg>
+          </svg> */}
           <span className="text-base font-serif tracking-wide text-foreground">Saravanan</span>
         </Link>
 
