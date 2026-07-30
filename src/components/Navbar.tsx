@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
-  { href: "/articles", label: "Articles" },
+  // { href: "/articles", label: "Articles" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -44,13 +44,13 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
           <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="33" height="33" stroke="hsl(var(--foreground))" strokeWidth="1"/>
-            <rect x="9" y="8"  width="14" height="2.5" fill="hsl(var(--foreground))"/>
-            <rect x="9" y="8"  width="2.5" height="9"   fill="hsl(var(--foreground))"/>
-            <rect x="9" y="15" width="14" height="2.5" fill="hsl(var(--foreground))"/>
-            <rect x="20.5" y="15" width="2.5" height="9" fill="hsl(var(--foreground))"/>
-            <rect x="9" y="21.5" width="14" height="2.5" fill="hsl(var(--foreground))"/>
-            <rect x="24" y="6" width="4" height="4" fill="hsl(var(--primary))"/>
+            <rect x="0.5" y="0.5" width="33" height="33" stroke="hsl(var(--foreground))" strokeWidth="1" />
+            <rect x="9" y="8" width="14" height="2.5" fill="hsl(var(--foreground))" />
+            <rect x="9" y="8" width="2.5" height="9" fill="hsl(var(--foreground))" />
+            <rect x="9" y="15" width="14" height="2.5" fill="hsl(var(--foreground))" />
+            <rect x="20.5" y="15" width="2.5" height="9" fill="hsl(var(--foreground))" />
+            <rect x="9" y="21.5" width="14" height="2.5" fill="hsl(var(--foreground))" />
+            <rect x="24" y="6" width="4" height="4" fill="hsl(var(--primary))" />
           </svg>
           <span className="text-base font-serif tracking-wide text-foreground">Saravanan</span>
         </Link>
@@ -61,11 +61,10 @@ export function Navbar() {
             <Link
               key={href}
               href={href}
-              className={`text-sm font-medium transition-all px-4 py-2 rounded-full ${
-                isActive(href)
-                  ? "bg-primary text-primary-foreground"
-                  : "text-foreground hover:bg-secondary"
-              }`}
+              className={`text-sm font-medium transition-all px-4 py-2 rounded-full ${isActive(href)
+                ? "bg-primary text-primary-foreground"
+                : "text-foreground hover:bg-secondary"
+                }`}
               style={{ letterSpacing: "0.02em" }}
             >
               {label}
@@ -89,7 +88,7 @@ export function Navbar() {
           >
             {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
           </button>
-          <button 
+          <button
             className="p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
@@ -113,11 +112,10 @@ export function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`text-lg font-medium transition-all px-4 py-3 rounded-lg ${
-                  isActive(href)
-                    ? "bg-primary/10 text-primary"
-                    : "text-foreground hover:bg-secondary"
-                }`}
+                className={`text-lg font-medium transition-all px-4 py-3 rounded-lg ${isActive(href)
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground hover:bg-secondary"
+                  }`}
               >
                 {label}
               </Link>

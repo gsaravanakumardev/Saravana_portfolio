@@ -16,28 +16,28 @@ export function Footer() {
 
         <div className="flex flex-col items-center gap-5">
           <a
-            href="mailto:gsaravana.uxdesign@gmail.com"
+            href="mailto:gsaravanakumar1101@gmail.com"
             className="inline-flex items-center gap-2 text-sm text-foreground hover:text-primary transition-colors"
           >
             <Mail size={15} />
-            <span>gsaravana.uxdesign@gmail.com</span>
+            <span>gsaravanakumar1101@gmail.com</span>
           </a>
 
           <div className="flex items-center gap-2 mt-1">
             <a href="https://github.com/gsaravanakumardev" target="_blank" rel="noreferrer"
-               className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="GitHub">
+              className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="GitHub">
               <SiGithub size={17} />
             </a>
             <a href="https://www.linkedin.com/in/saravana-design/" target="_blank" rel="noreferrer"
-               className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="LinkedIn">
+              className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="LinkedIn">
               <FaLinkedin size={17} />
             </a>
             <a href="https://www.behance.net/saravanan_design" target="_blank" rel="noreferrer"
-               className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="Behance">
+              className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="Behance">
               <SiBehance size={17} />
             </a>
             <a href="https://dribbble.com/saravananakumar" target="_blank" rel="noreferrer"
-               className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="Dribbble">
+              className="p-2.5 border border-border text-foreground hover:text-primary hover:border-primary transition-all" aria-label="Dribbble">
               <SiDribbble size={17} />
             </a>
           </div>

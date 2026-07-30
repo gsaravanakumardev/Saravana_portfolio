@@ -17,7 +17,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ duration: 0.5, delay: index * 0.06 }}
     >
       <Link href={`/work/${project.id}`} className="block">
-        {/* Large colored preview area — fills full width */}
+        {/* Large colored preview area - fills full width */}
         <div
           className="w-full overflow-hidden relative"
           style={{
@@ -43,7 +43,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
         {/* Content below the image area */}
         <div className="pt-5 pb-2">
-          {/* Title — large, like reference */}
+          {/* Title - large, like reference */}
           <h3
             className="font-serif text-foreground leading-tight mb-2"
             style={{ fontSize: "clamp(1.6rem, 3vw, 2.25rem)", fontWeight: 400 }}
@@ -51,12 +51,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             {project.title}
           </h3>
 
-          {/* Subtitle — // category */}
+          {/* Subtitle - // category */}
           <p className="text-muted-foreground text-sm font-light mb-5 tracking-wide">
             // {project.category}
           </p>
 
-          {/* Button — only this element hovers */}
+          {/* Button - only this element hovers */}
           <span className="inline-flex items-center gap-2 border border-foreground/30 text-foreground text-sm font-medium px-5 py-2.5 hover:border-primary hover:text-primary transition-colors">
             View Case Study <ArrowRight size={13} />
           </span>

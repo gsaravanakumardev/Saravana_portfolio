@@ -125,7 +125,7 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        {/* Personas — 2 side by side */}
+        {/* Personas - 2 side by side */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <h2 className="text-2xl font-serif text-foreground sticky top-24">Target Personas</h2>

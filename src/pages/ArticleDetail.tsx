@@ -20,7 +20,7 @@ export default function ArticleDetail() {
     );
   }
 
-  // Suggested reads — other articles
+  // Suggested reads - other articles
   const suggested = articles.filter((a) => a.slug !== slug).slice(0, 3);
 
   return (

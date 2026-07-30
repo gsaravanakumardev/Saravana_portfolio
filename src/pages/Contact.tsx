@@ -25,7 +25,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -61,13 +61,13 @@ export default function Contact() {
           </h1>
           <p className="text-base text-muted-foreground font-light max-w-xl leading-relaxed">
             Open to freelance collaborations, full-time opportunities, or just a friendly design conversation.
-            Drop me a message — I typically respond within 24 hours.
+            Drop me a message - I typically respond within 24 hours.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-16">
 
-          {/* Left — info */}
+          {/* Left - info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -134,7 +134,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -220,7 +220,7 @@ export default function Contact() {
                   className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm font-medium px-8 py-4 hover:opacity-90 transition-opacity disabled:opacity-50"
                 >
                   {isSubmitting ? (
-                     <span className="flex items-center gap-2">Sending...</span>
+                    <span className="flex items-center gap-2">Sending...</span>
                   ) : (
                     <>
                       <Send size={15} /> Send Message

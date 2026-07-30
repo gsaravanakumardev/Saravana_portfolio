@@ -116,14 +116,16 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="flex-shrink-0 w-64 md:w-80 lg:w-96"
+          className="flex-shrink-0 w-64 md:w-80 lg:w-96 relative"
         >
-          <img src="/Heroprofile.png" alt="Portrait of Saravanan" className="w-full h-auto object-cover organic-mask" />
+          <img src="/Lighthero.png" alt="Portrait of Saravanan Light" className="w-full h-auto object-cover organic-mask block dark:hidden" />
+          <img src="/Darkhero.png" alt="Portrait of Saravanan Dark" className="w-full h-auto object-cover organic-mask hidden dark:block" />
+          {/* <img src="/Flower.svg" alt="Flower Decoration" className="absolute -bottom-10 -right-10 md:-bottom-10 md:-right-10 w-24 h-24 md:w-32 md:h-32 pointer-events-none z-10" /> */}
         </motion.div>
       </section>
 
       {/* ── Words I Design By ── */}
-      <section className="max-w-5xl mx-auto px-6 py-10 border-t border-border">
+      {/* <section className="max-w-5xl mx-auto px-6 py-10 border-t border-border">
         <div className="flex items-center justify-between mb-8">
           <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase">Words I Design By</p>
           <div className="flex items-center gap-2">
@@ -156,7 +158,7 @@ export default function Home() {
                 "{designQuotes[quoteIndex].quote}"
               </p>
               <p className="text-xs font-bold tracking-widest text-primary uppercase">
-                — {designQuotes[quoteIndex].author}
+                - {designQuotes[quoteIndex].author}
               </p>
             </motion.div>
           </AnimatePresence>
@@ -177,9 +179,9 @@ export default function Home() {
             />
           ))}
         </div>
-      </section>
+      </section> */}
 
-      {/* ── Portfolio — 3 Featured Works ── */}
+      {/* ── Portfolio - 3 Featured Works ── */}
       <section className="max-w-5xl mx-auto px-6 py-10 border-t border-border">
         <div className="flex items-end justify-between mb-12">
           <div>

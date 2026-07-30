@@ -5,13 +5,23 @@ const experiences = [
     role: "Design Technologist",
     company: "DesignPettai",
     period: "Oct 2024 – Present",
-    description: "Designing user interfaces and digital product experiences in Figma – wireframes, prototypes and responsive UI – connecting user needs with business goals.",
+    description: [
+      "Designed intuitive web and mobile user interfaces using Figma, ensuring seamless user experiences aligned with business objectives.",
+      "Created user flows, wireframes, high-fidelity mockups, and interactive prototypes to validate design concepts and improve usability.",
+      "Conducted UX research and translated user needs and stakeholder requirements into scalable, user-centered design solutions.",
+      "Collaborated closely with developers, product teams, and stakeholders to deliver responsive, accessible, and impact digital products."
+    ],
   },
   {
     role: "Software Developer",
     company: "Gove.co, Tirunelveli",
     period: "Jun 2023 – Jun 2024",
-    description: "Worked extensively with Microsoft SQL Server, developing efficient databases and business logic. Partnered with clients to deliver software aligned with their goals.",
+    description: [
+      "Collaborated with clients and stakeholders to gather requirements and translate business needs into effective software solutions.",
+      "Developed and maintained databases and business logic using Microsoft SQL Server to support enterprise applications.",
+      "Participated in application development, testing, debugging, and optimization to improve system performance and reliability.",
+      "Worked closely with cross-functional teams to deliver scalable solutions aligned with client objectives and business goals."
+    ],
   },
 ];
 
@@ -19,21 +29,21 @@ const skillCategories = [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
-        <rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
+        <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
       </svg>
     ),
-    title: "Product Design",
-    skills: ["Product Thinking", "User-Centered Design", "Design Strategy", "Product Discovery", "Information Architecture", "Design Systems", "Interaction Design", "User Flows"],
+    title: "Core Skills",
+    skills: ["User Experience Design", "User Interface Design", "Design System Creation", "User Research Methods", "Interactive Prototyping", "Wireframing & Testing", "Responsive Product Design", "React Development", "Component Architecture", "Tailwind CSS"],
   },
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
+        <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
       </svg>
     ),
-    title: "UX Design",
-    skills: ["User Research", "Personas", "Journey Mapping", "Wireframing", "Prototyping", "Usability Testing", "Accessibility", "Heuristic Evaluation"],
+    title: "Tools",
+    skills: ["Figma", "FigJam", "VS Code", "GitHub"],
   },
   {
     icon: (
@@ -41,17 +51,8 @@ const skillCategories = [
         <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
       </svg>
     ),
-    title: "UI Design",
-    skills: ["Mobile App Design", "Web Application Design", "Dashboard Design", "Responsive Design", "Visual Design", "Typography", "Color Systems", "Auto Layout"],
-  },
-  {
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-    title: "Tech",
-    skills: ["ReactJS", "HTML5", "CSS3", "JavaScript (ES6+)", "TailwindCSS", "SQL Server"],
+    title: "Motion",
+    skills: ["Framer", "GSAP"],
   },
 ];
 
@@ -80,7 +81,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row gap-12 items-start"
+            className="flex flex-col md:flex-row gap-12 items-center"
           >
             <div className="flex-1 space-y-5">
               <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase">Getting Started</p>
@@ -91,7 +92,7 @@ export default function About() {
               </div>
             </div>
             <div className="flex-shrink-0 w-full md:w-64">
-              <img src="/Heroprofile.png" alt="Curiosity-driven" className="w-full h-auto object-cover organic-mask" />
+              <img src="/Hero-1.png" alt="Curiosity-driven" className="w-full h-auto object-cover organic-mask" />
             </div>
           </motion.div>
 
@@ -100,7 +101,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row-reverse gap-12 items-start"
+            className="flex flex-col md:flex-row-reverse gap-12 items-center"
           >
             <div className="flex-1 space-y-5">
               <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase">My Approach</p>
@@ -111,7 +112,7 @@ export default function About() {
               </div>
             </div>
             <div className="flex-shrink-0 w-full md:w-64">
-              <img src="/Heroprofile.png" alt="User-centered" className="w-full h-auto object-cover organic-mask" />
+              <img src="/Hero-2.png" alt="User-centered" className="w-full h-auto object-cover organic-mask" />
             </div>
           </motion.div>
 
@@ -125,7 +126,7 @@ export default function About() {
             <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase">Moving Forward</p>
             <h3 className="text-2xl md:text-3xl font-serif text-foreground" style={{ fontWeight: 400 }}>Ready to make an impact</h3>
             <p className="text-muted-foreground font-light leading-relaxed text-base max-w-3xl">
-              I am eager to collaborate with cross-functional teams to build products that matter. I thrive in environments where ideas are challenged, tested, and iterated upon. My ultimate goal is to create digital experiences that not only meet business objectives but bring genuine satisfaction and delight to the people who use them.
+              I am eager to bridge the gap between design and development, leveraging my UI/UX skills alongside my technical background. I thrive in cross-functional environments where creative concepts are translated into clean, performant code. My ultimate goal is to build cohesive, user-centered digital products that not only look beautiful but function flawlessly and meet business objectives.
             </p>
           </motion.div>
         </div>
@@ -165,7 +166,7 @@ export default function About() {
                       marginTop: "3px",
                     }}
                   />
-                  {/* Connector line — only between entries */}
+                  {/* Connector line - only between entries */}
                   {i < experiences.length - 1 && (
                     <div
                       className="flex-1"
@@ -188,7 +189,11 @@ export default function About() {
                     </span>
                   </div>
                   <p className="text-sm font-medium text-primary mb-3">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{exp.description}</p>
+                  <ul className="text-sm text-muted-foreground font-light leading-relaxed list-disc list-outside ml-4 space-y-2">
+                    {exp.description.map((desc, idx) => (
+                      <li key={idx}>{desc}</li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}

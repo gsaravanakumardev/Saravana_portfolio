@@ -18,7 +18,7 @@ export default function Portfolio() {
             Portfolio
           </h1>
           <p className="text-base text-muted-foreground font-light max-w-xl leading-relaxed">
-            A collection of UI/UX design projects spanning mobile apps, web platforms, civic tools, and SaaS dashboards — each rooted in user research and crafted with intention.
+            A collection of UI/UX design projects spanning mobile apps, web platforms, civic tools, and SaaS dashboards - each rooted in user research and crafted with intention.
           </p>
         </motion.div>
 
